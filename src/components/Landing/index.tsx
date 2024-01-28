@@ -59,10 +59,10 @@ const Landing = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-[1.2rem]">
             <div className="flex flex-col gap-[1rem] items-start">
               <h1 className="text-[#1F2937] text-5xl sm:text-6xl font-bold">
-                Grow your <span className="text-[#077DBB]">money</span> today
+                Grow your <span className="text-[#077DBB]"><br/>money</span> today
               </h1>
               <p className="text-[#4B5563] text-base sm:text-lg font-medium tracking-normal">
-                Get the opportunity to unlock earnings as you save
+                Get the opportunity to unlock earnings <br/>as you save
               </p>
               <button className="bg-[#077DBB] text-[#FFFFFF] w-full sm:w-auto p-4 rounded-md">
                 Start Investing
