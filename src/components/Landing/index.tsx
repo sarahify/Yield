@@ -13,6 +13,7 @@ import rightBig from "../../assets/icons/right_big.png";
 import rightSmall from "../../assets/icons/right_small.svg";
 import woman2 from "../../assets/img/woman_fantastic.png";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const SmallStar = () => {
   return (
@@ -40,7 +41,7 @@ const BigStar = () => {
       height="91"
       viewBox="0 0 91 91"
       fill="none"
-      className="absolute right-[15.72rem] top-[15.69rem] w-12 sm:w-auto"
+      className="absolute right-[15.72rem] top-[15.69rem] w-12 md:w-auto"
     >
       <path
         d="M45.4512 0.964844L53.4093 38.0245L90.469 45.9826L53.4093 53.9407L45.4512 91.0004L37.4931 53.9407L0.433411 45.9826L37.4931 38.0245L45.4512 0.964844Z"
@@ -53,31 +54,31 @@ const BigStar = () => {
 const Landing = () => {
   return (
     <>
-      <div className=" p-4 sm:px-28 sm:py-10 flex flex-col gap-12 relative">
+      <div className=" p-4 md:px-28 md:py-10 flex flex-col gap-12 relative">
         <Navbar />
-        <section className="flex flex-col gap-[5.19rem]">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-[1.2rem]">
-            <div className="flex flex-col gap-[1rem] items-start">
-              <h1 className="text-[#1F2937] text-5xl sm:text-6xl font-bold">
-                Grow your <span className="text-[#077DBB]"><br/>money</span> today
+        <section className="flex flex-col gap-20">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <div className="flex flex-col gap-4 items-start">
+              <h1 className=" text-slate-700 text-5xl font-bold">
+                Grow your <span className=" text-primary"><br/>money</span> today
               </h1>
-              <p className="text-[#4B5563] text-base sm:text-lg font-medium tracking-normal">
+              <p className=" text-slate-600 text-base font-medium tracking-normal">
                 Get the opportunity to unlock earnings <br/>as you save
               </p>
-              <button className="bg-[#077DBB] text-[#FFFFFF] w-full sm:w-auto p-4 rounded-md">
+              <Button variant="contained" className=" w-100% p-4 rounded-md bg-primary">
                 Start Investing
-              </button>
+              </Button>
             </div>
-            <div className="pt-16 w-full sm:w-[40.3%] bg-[#CCECFD] rounded-3xl ">
+            <div className="pt-16 w-auto bg-var rounded-3xl">
               <img
                 src={youngwoman}
                 alt="Woman Picture"
-                className="hidden sm:flex"
+                className="hidden md:flex"
               />
-              <img src={woman2} alt="Smiling woman" className="sm:hidden" />
+              <img src={woman2} alt="Smiling woman" className="md:hidden" />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-2 items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-2 items-center justify-between w-full">
             {/* mapping */}
             {values.map((item) => (
               <ValueCard
@@ -91,11 +92,12 @@ const Landing = () => {
             ))}
           </div>
         </section>
-        <section className="flex flex-col gap-[1.5rem]">
-          <h1 className="w-full sm:w-[50%] m-auto text-4xl sm:text-5xl font-medium leading-3.25 tracking-tighter text-center">
+        <section className="flex flex-col gap-6">
+          <h1 className=" text-neutral-800 text-center text-4xl  font-medium leading-10 tracking-tighter m-auto md:text-5xl lg:px-80 md:my-20 md:mx-2">
             Feel the best experience with our features
           </h1>
-          <div className="flex flex-col sm:flex-row justify-between gap-[1.5rem]">
+          {/* flex flex-col md:flex-row justify-between gap-6 */}
+          <div className="flex flex-col md:flex-row justify-between gap-6">
             {features.map((data) => (
               <FeatureCard
                 key={data.bigTitle}
@@ -110,28 +112,28 @@ const Landing = () => {
               />
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row items-center px-6 py-8 rounded-3xl bg-[#077dbb0a] justify-between sm:px-12 h-[72vh] sm:h-[60vh] relative overflow-hidden">
-            <div className="flex flex-col gap-[2rem] items-start w-full sm:w-[46%]">
-              <div className="rounded-full bg-[#077DBB] flex items-center justify-center w-14 h-14 sm:w-18 sm:h-18">
+          <div className="flex flex-col md:flex-row items-center px-6 py-8 rounded-3xl bg-neutral-50 justify-between md:px-12 h-96 md:h-96 relative overflow-hidden">
+            <div className="flex flex-col gap-8 items-start w-auto md:w-2/5">
+              <div className="rounded-full bg-primary flex items-center justify-center w-14 h-14 md:w-18 md:h-18">
                 <img
                   src={padlock}
                   alt="padlock"
-                  className="w-6 h-6 sm:w-auto sm:h-auto"
+                  className="w-6 h-6 md:w-auto md:h-auto"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-[#055986] text-2xl sm:text-4xl font-semibold">
+                <span className=" text-primary text-2xl md:text-4xl font-semibold">
                   Guaranteed Returns
                 </span>
-                <span className="text-[#6B7280] text-xs sm:text-base font-normal">
+                <span className=" text-neutral text-xs md:text-base font-normal">
                   With Fixed Savings, you can enjoy the peace of mind that comes
                   with guaranteed returns. Your deposited funds are protected.
                 </span>
               </div>
             </div>
 
-            <div className="w-full sm:w-[41.9%] bg-[#F3F4F6] flex justify-center border border-[#E5E7EB] rounded-2xl absolute top-64 sm:right-[3rem] sm:top-16 h-[80vw] sm:h-[29vw]">
-              <div className="w-[95.7%] flex items-center justify-center bg-[#F9FAFB] border border-[#E5E7EB] p-[1.5rem] absolute top-[-2rem] rounded-2xl">
+            <div className="w-full md:w-5/12 bg-neutral-200 flex justify-center border border-neutral-50 rounded-2xl absolute top-64 md:right-12 md:top-16 h-4/5 md:h-80">
+              <div className="w-11/12 flex items-center justify-center bg-neutral-50 border border-natural-200 p-6 absolute -top-8 rounded-2xl">
                 <img src={woman} alt="woman" />
               </div>
             </div>
@@ -139,14 +141,14 @@ const Landing = () => {
         </section>
         <section className="flex flex-col gap-16">
           <div>
-            <h1 className="text-4xl sm:text-[2.75rem] font-medium leading-3.25 tracking-tighter text-center">
+            <h1 className="text-4xl md:text-5xl font-medium leading-3.25 tracking-tighter text-center text-neutral-800">
               How it works
             </h1>
-            <p className="text-[1.125rem] text-center text-[#6B7280]">
+            <p className="text-lg text-center text-neutral">
               It’s very easy
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-[0.8rem]">
+          <div className="flex flex-col md:flex-row gap-3">
             {howItWorksData.map((data) => (
               <HowItWorksCard
                 icon={data.icon}
@@ -156,18 +158,18 @@ const Landing = () => {
             ))}
           </div>
         </section>
-        <section className="flex flex-col overflow-hidden relative items-center justify-center px-5 py-20 sm:py-32 bg-gradient-to-b from-[#077DBB] to-[#07608F] rounded-3xl">
-          <div className="flex flex-col items-center w-full sm:w-[47.3%] gap-[2rem] relative z-10">
-            <span className="text-white text-center text-4xl sm:text-5xl font-bold">
+        <section className="flex flex-col overflow-hidden relative items-center justify-center px-5 py-20 md:py-32 bg-gradient-to-b from-[#077DBB] to-[#07608F] rounded-3xl">
+          <div className="flex flex-col items-center w-full md:w-2/5 gap-8 relative ">
+            <span className="text-white text-center text-4xl md:text-5xl font-bold">
               Start Saving Today!
             </span>
-            <span className="text-white text-sm sm:text-lg font-normal text-center">
+            <span className="text-white text-sm md:text-lg font-normal text-center">
               Fixed Saving Solution designed to help you grow your savings
               effortlessly.
             </span>
-            <button className="w-full sm:w-auto text-white bg-[#077DBB] px-[1.25rem] py-[0.625rem] rounded-md">
+            <Button variant="contained" className="w-full md:w-auto text-white  px-5 py-2.5 rounded-md">
               Get Started
-            </button>
+            </Button>
           </div>
           <SmallStar />
           <BigStar />
@@ -175,39 +177,38 @@ const Landing = () => {
           <img
             src={leftSmall}
             alt=""
-            className="absolute bottom-0 left-[13rem] w-12"
+            className="absolute bottom-0 left-48 w-12"
           />
           <img src={rightBig} alt="" className="absolute top-0 right-0 w-20" />
           <img
             src={rightSmall}
             alt=""
-            className="absolute top-0 right-[13rem]"
+            className="absolute top-0 right-48"
           />
         </section>
       </div>
-      <footer className="bg-[#111827] flex px-[7.8%] py-[4.4%] flex-col items-start gap-[4rem]">
-        <div className="flex w-[100%] flex-col sm:flex-row items-start justify-between gap-6">
-          <div className="flex flex-col w-full sm:w-[32.4%]">
+      <footer className=" bg-neutral-900 flex px-28 py-16 flex-col items-start gap-16">
+        <div className="flex w-full flex-col md:flex-row items-start justify-between gap-6">
+          <div className="flex flex-col w-full sm:w-1/3">
             <img
               src={yieldlogo}
               alt="Yield Cdl"
-              className="w-[6.125rem] h-[2.625rem]"
+              className="w-24 h-10"
             />
-            <p className="text-[#E5E7EB] text-sm sm:text-base font-normal leading-6">
+            <p className=" text-neutral-200 text-sm sm:text-base font-normal leading-6">
               Fixed savings plans tailored to your financial goals.
             </p>
           </div>
-
-          <div className="flex flex-col sm:flex-row w-full sm:w-[40.8%] items-start justify-between text-[#D1D5DB] text-base leading-6 self-stretch gap-6">
-            <div className="text-base font-normal flex flex-col gap-[0.5rem] w-full sm:w-[50%] leading-6 self-stretch">
-              <p className="text-[#F3F4F6] font-medium">Company</p>
+          <div className="flex flex-col sm:flex-row w-full sm:w-2/5 items-start justify-between text-neutral-300 text-base leading-6 self-stretch gap-6">
+            <div className="text-base font-normal flex flex-col gap-2 w-full sm:w-2/4 leading-6 self-stretch">
+              <p className="text-neutral-100 font-medium">Company</p>
               <p>About</p>
               <p>Legal</p>
               <p>Privacy Policy</p>
             </div>
 
-            <div className="text-[#D1D5DB] w-full sm:w-[50%] text-base flex flex-col gap-[0.5rem] font-normal leading-6 self-stretch">
-              <span className="text-[#F3F4F6] font-medium"> Contact Us</span>
+            <div className="text-neutral-300 w-full sm:w-2/4 text-base flex flex-col gap-2 font-normal leading-6 self-stretch">
+              <span className=" text-neutral-100 font-medium"> Contact Us</span>
               <p>Phone: 01-4482225</p>
               <p>
                 Address: 48/50 Isaac John Street, GRA, Ikeja, Lagos, Nigeria.
@@ -216,15 +217,15 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row items-center border-t w-full pt-[1.94rem] gap-4 justify-between">
-          <div className="flex gap-[1rem] mr-auto sm:m-0">
+        <div className="flex flex-col sm:flex-row items-center border-t w-full pt-7 gap-4 justify-between">
+          <div className="flex gap-4 mr-auto sm:m-0">
             {socialIcons.map((url) => (
               <Link to={url.url} key={url.url}>
-                <img src={url.path} className="w-[1.5rem] h-[1.5rem]" />
+                <img src={url.path} className="w-6 h-6" />
               </Link>
             ))}
           </div>
-          <span className="text-[#9CA3AF] text-sm font-normal">
+          <span className=" text-neutral-400 text-sm font-normal">
             Copyright © Credit Direct Limited. Authorized and regulated by the
             CBN.
           </span>

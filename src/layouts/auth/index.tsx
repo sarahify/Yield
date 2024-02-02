@@ -22,31 +22,31 @@ const AuthLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
   }, [currentIndex]);
   return (
     <div className=" flex bg-neutral-100 h-screen w-screen">
-      <div className="w-[50vw] h-[100vh] hidden justify-center items-center relative sm:flex">
+      <div className="w-2/4 h-screen hidden justify-center items-center relative md:flex">
         <Link to="/">
           <img
             src={logo}
             alt="company logo"
-            className="w-[5.75756rem] h-[2.5rem] absolute top-[3.8%] left-[8.1%]"
+            className="w-20 h-10 absolute top-[3.8%] left-[8.1%]"
           />
         </Link>
-        <div className="w-[67.5%] pb-8 gap-[0.5rem] flex flex-col rounded-lg bg-white bg-opacity-90 backdrop-blur-14 relative">
+        <div className="w-4/6 pb-8 gap-2 flex flex-col rounded-lg bg-white bg-opacity-90 backdrop-blur-14 relative">
           <img src={signInImg} alt="" className="rounded-lg" />
-          <div className="flex flex-col items-center gap-[0.5rem] py-0 px-[1rem]">
-            <span className="text-[#077DBB] text-s text-center font-bold text-lg leading-8 tracking-tight">
+          <div className="flex flex-col items-center gap-2 py-0 px-4">
+            <span className="text-primary text-s text-center font-bold text-lg leading-8 tracking-tight">
               {slidingTexts?.[currentIndex]?.title}
             </span>
-            <p className="text-neutral-500 text-center font-medium text-sm leading-5 h-[3rem]">
+            <p className="text-neutral-500 text-center font-medium text-sm leading-5 h-12">
               {slidingTexts?.[currentIndex]?.content}
             </p>
           </div>
-          <div className="flex align-center justify-center gap-[0.5rem]">
+          <div className="flex align-center justify-center gap-2">
             <span
               style={{
                 background: `${currentIndex === 0 ? "#077DBB" : "#9CA3AF"}`,
                 cursor: `${currentIndex === 0 ? "not-allowed" : "pointer"}`,
               }}
-              className={`rounded-full w-[0.6875rem] h-[0.6875rem]`}
+              className={`rounded-full w-2 h-2`}
               onClick={() => setCurrentIndex(0)}
             ></span>
             <span
@@ -54,7 +54,7 @@ const AuthLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 background: `${currentIndex === 1 ? "#077DBB" : "#9CA3AF"}`,
                 cursor: `${currentIndex === 1 ? "not-allowed" : "pointer"}`,
               }}
-              className={`rounded-full w-[0.6875rem] h-[0.6875rem]`}
+              className={`rounded-full w-2 h-2`}
               onClick={() => setCurrentIndex(1)}
             ></span>
             <span
@@ -62,7 +62,7 @@ const AuthLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 background: `${currentIndex === 2 ? "#077DBB" : "#9CA3AF"}`,
                 cursor: `${currentIndex === 2 ? "not-allowed" : "pointer"}`,
               }}
-              className={`rounded-full w-[0.6875rem] h-[0.6875rem]`}
+              className={`rounded-full w-2 h-2`}
               onClick={() => setCurrentIndex(2)}
             ></span>
           </div>
